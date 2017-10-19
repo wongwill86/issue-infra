@@ -8,7 +8,7 @@ This works:
         "Plugin": "group",
         "Properties": {
             "ID": "test",
-            "Description": "1234567890",
+            "Description": "1.23456789e+09",
             "Properties": {
                 "Allocation": {
                   "Size": 1
