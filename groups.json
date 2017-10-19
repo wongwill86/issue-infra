@@ -1,0 +1,27 @@
+{{ $initScript := `file:///home/ubuntu/init.sh` }}
+[
+    {
+        "Plugin": "group",
+        "Properties": {
+            "ID": "test",
+            "Description": "{{ include (cat (var `filename`) `.txt` | nospace )| trunc 10 }}",
+            "Properties": {
+                "Allocation": {
+                  "Size": 1
+                },
+                "Instance": {
+                  "Plugin": "instance-vagrant",
+                  "Properties": {
+                    "Box": "bento/ubuntu-16.04"
+                  }
+                },
+                "Flavor": {
+                    "Plugin": "vanilla",
+                    "Properties": {
+                        "InitScriptTemplateURL": "{{ $initScript }}"
+                    }
+                }
+            }
+        }
+    }
+]
