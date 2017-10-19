@@ -1,2 +1,2 @@
 echo hello
-{{ include (cat (var `filename`) `.txt` | nospace )| trunc 10 }}
+{{ include (cat (var `filename`) `.txt` | nospace ) | jsonDecode }}

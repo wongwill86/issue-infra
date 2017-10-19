@@ -4,7 +4,7 @@
         "Plugin": "group",
         "Properties": {
             "ID": "test",
-            "Description": "{{ include (cat (var `filename`) `.txt` | nospace )| trunc 10 }}",
+            "Description": "{{ include (cat (var `filename`) `.txt` | nospace ) | jsonDecode }}",
             "Properties": {
                 "Allocation": {
                   "Size": 1
